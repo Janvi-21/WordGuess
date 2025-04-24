@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ramayana Word Guess</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Tiro+Devanagari+Sanskrit&display=swap" rel="stylesheet">
+
+</head>
+<body>
+    <h1 id="game-title" class="game-title">The Legend: <span id="sans">RAMAYANA</span></h1>
+    <!-- Instruction Screen -->
+    <div id="instruction-screen" class="screen">
+        <h1>Welcome to Ramayana Word Guess</h1>
+        <p>Guess the Ramayana-related word in 5 tries. Word length may vary.</p>
+        <p><strong>Color hints:</strong></p>
+        <ul>
+            <li><span class="green">Green</span>: Correct letter in the correct position.</li>
+            <li><span class="yellow">Yellow</span>: Correct letter but wrong position.</li>
+        </ul>
+        <button id="start-game-btn">Start Game</button>
+    </div>
+
+    <!-- Main Game Container (Initially Hidden) -->
+    <div id="game-container" class="hidden">
+        <!-- <h1>Ramayana Word Guess</h1> -->
+        <p id="hint"></p>
+        <div id="game-board"></div>
+
+        <!-- On-Screen Keyboard (Initially Hidden) -->
+        <div id="keyboard" class="hidden">
+            <div class="keyboard-row">
+                <button class="key">q</button><button class="key">w</button><button class="key">e</button>
+                <button class="key">r</button><button class="key">t</button><button class="key">y</button>
+                <button class="key">u</button><button class="key">i</button><button class="key">o</button><button class="key">p</button>
+            </div>
+            <div class="keyboard-row">
+                <button class="key">a</button><button class="key">s</button><button class="key">d</button>
+                <button class="key">f</button><button class="key">g</button><button class="key">h</button>
+                <button class="key">j</button><button class="key">k</button><button class="key">l</button>
+            </div>
+            <div class="keyboard-row">
+                <button class="key">z</button><button class="key">x</button><button class="key">c</button>
+                <button class="key">v</button><button class="key">b</button><button class="key">n</button>
+                <button class="key">m</button>
+            </div>
+            <div class="keyboard-row">
+                <button class="key special-key" id="backspace">⌫</button>
+                <button class="key special-key" id="enter">Enter</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Popup Message -->
+    <div id="popup" class="hidden">
+        <div class="popup-content">
+            <p id="popup-message"></p>
+            <button id="new-game-btn" style="align-items: center;">New Game</button>
+            <!-- <button id="new-game-btn" class="hidden">New Game</button> -->
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
